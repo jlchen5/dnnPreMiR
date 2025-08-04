@@ -61,7 +61,7 @@ def parse_opt(argv):
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print (usage())
+            print(usage())
             sys.exit(0)
         elif opt in ("-s", "--sequence"):
             seq = arg
@@ -132,7 +132,7 @@ def main(argv):
         result = predict_results(seq_struct_vector)
         #print(result)
         # print the prediction based on the result
-        print ("Your input pre-miRNA sequence: {} ".format(seq))
+        print("Your input pre-miRNA sequence: {} ".format(seq))
         #print(seq_struct)
         if np.argmax(result) == 0:
             print("Yes,it is a pre-miRNA")
@@ -145,7 +145,7 @@ def main(argv):
         if not os.path.exists(infile):
             print("file doesn't exist!")
             sys.exit(1)
-        print (infile)
+        print(infile)
         # calculate the second structure
         os.system("./bin/RNAfold -i " + infile + " --noPS" \
                    + "> ./temp/temp_infile_seq_struct")
