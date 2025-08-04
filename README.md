@@ -1,15 +1,21 @@
 ###################################################################################### 
-Using Trained CNN model to predict pre-miRNAs.
+
+Using a Trained CNN model to predict pre-miRNAs. 
+
 Data are from the human pre-miRNAs and hairpin structure sequences from human coding regions.
 
 ######################################################################################
 
 USAGE:
-          python isPreMiR.py -s RNAsequence 
-          for example: python isPreMiR.py -s CUCCGGUGCCUACUGAGCUGAUAUCAGUUCUCAUUUUACACACUGGCUCAGUUCAGCAGGAACAGGA
+```shell
+python isPreMiR.py -s RNAsequence
 
-          python isPreMiR.py -i inputFilePath [-o outputFilePath]
+### for example: 
+          
+python isPreMiR.py -s CUCCGGUGCCUACUGAGCUGAUAUCAGUUCUCAUUUUACACACUGGCUCAGUUCAGCAGGAACAGGA
 
+python isPreMiR.py -i inputFilePath [-o outputFilePath]
+```
 (note:The length of RNA should be not more than 180, all the input RNA sequence will be truncated or padded into 180 length)
       
 
